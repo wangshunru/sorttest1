@@ -22,7 +22,7 @@ public class MaxArea {
         int end = nums.length-1;
         int area = 0;
         while (start < end){
-            area = nums[start] < nums[end]?Math.max(area,(end-start)*nums[start++]):Math.max(area,(end-start)*nums[end--]);
+            area = nums[start] < nums[end]?Math.max(area,(end-start)*nums[start++]):Math.max(area,(end-start)*nums[end--]); //49
         }
         return area;
 
