@@ -9,11 +9,16 @@ package leetcode;
 *
 * */
 public class ReverseOnlyLetters {
-    public String reverseOnlyLetters(String S) {
+
+    public static void main(String[] args) {
+        String s = reverseOnlyLetters("Test1ng-Leet=code-Q!");
+        System.out.println(s);
+    }
+    public  static  String reverseOnlyLetters(String S) {
         char[] chars = S.toCharArray();
         if (chars.length < 2) return S;
         int left = 0;
-        int right = chars.length;
+        int right = chars.length-1;
         while (left < right){
             while (left < right && !isChar(chars[left])) left++;
             while (left < right && !isChar(chars[right])) right--;
@@ -27,7 +32,7 @@ public class ReverseOnlyLetters {
         }
         return new String(chars);
     }
-    public boolean isChar(char c){
+    public static boolean isChar(char c){
         return  (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z');
     }
 }
