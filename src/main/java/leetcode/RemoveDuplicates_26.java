@@ -5,7 +5,8 @@ package leetcode;
  * e-mail: wsr12240512@163.com
  * phone: 13388071923
  */
-public class RemoveDuplicates {
+//删除排序数组中的重复项
+public class RemoveDuplicates_26 {
     public static void main(String[] args) {
         int[] nums = {0,0,1,1,3,3,4,5,5,5};
 

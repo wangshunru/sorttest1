@@ -12,7 +12,7 @@ package leetcode;
 * 使得它们与 x 轴共同构成的容器可以容纳最多的水。
 
 * */
-public class MaxArea {
+public class MaxArea_11 {
     public static void main(String[] args) {
         int[] nums = {1,8,6,2,5,4,8,3,7};
         System.out.println(maxArea(nums));

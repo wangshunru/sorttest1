@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 //思路 分离出各位数
 * */
-public class SubtractProductAndSum {
+public class SubtractProductAndSum_1281 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

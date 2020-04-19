@@ -10,7 +10,7 @@ package leetcode;
 *   分析 从第3级台阶开始 只能从 n-1 或者 n-2 上一级或者2级台阶
 *   所以 f(n) = f(n-1)+f(n-2)  斐波那契
 * */
-public class ClimbStairs {
+public class ClimbStairs_70 {
     public static void main(String[] args) {
         System.out.println(climbStairs(6));
         System.out.println(gs(6 ));

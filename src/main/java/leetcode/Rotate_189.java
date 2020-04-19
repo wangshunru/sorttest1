@@ -20,7 +20,7 @@ package leetcode;
     //第一次翻转  {7,6,5,4,3,2,1}
     //第二次翻转  {5,6,7,4,3,2,1}
     //第三次翻转  {5,6,7,1,2,3,4}
-public class Rotate {
+public class Rotate_189 {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,7};
         int[] retate = retate(nums, 3);
