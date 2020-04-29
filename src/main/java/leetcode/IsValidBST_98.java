@@ -13,7 +13,7 @@ public class IsValidBST_98 {
     public static boolean isValidBST(TreeNode root){
         return _generare(root,null,null);
     }
-
+    //使用TreeNode 本身做上下界
     public static boolean _generare(TreeNode node,TreeNode min,TreeNode max){
         if (node == null) return true;
         if (min != null && node.val <= min.val) return false;
