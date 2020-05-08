@@ -10,6 +10,42 @@ public class MaxSlidingWindow_239 {
 
     }
 
+    public static int[] maxSlidingWindow1(int[] nums,int k){
+        if (nums.length == 0){
+            return nums;
+        }
+        //当前数到左边界的最大值
+        int[] leftMax = new int[nums.length];
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (i % k == 0){
+                max = Integer.MIN_VALUE;
+            }
+            if(max < nums[i]){
+                max = nums[i];
+            }
+            leftMax[i] = Math.max(nums[i],max);
+        }
+        //当前数到右边界的最大值
+        int[] rightMax = new int[nums.length];
+        max = Integer.MIN_VALUE;
+        for(int i = nums.length-1;i >= 0;i--){
+            if (i % k == 0){
+                max = Integer.MIN_VALUE;
+            }
+            if (max < nums[i]){
+                max = nums[i];
+            }
+            rightMax[i] = Math.max(nums[i],max);
+        }
+        int[] res = new int[nums.length -k + 1];
+        for (int i = 0;i < res.length;i++){
+            int j = i+k-1;
+            res[i] = Math.max(leftMax[j],rightMax[i]);
+        }
+        return res;
+    }
+
     public static int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         if (n == 0) return nums;

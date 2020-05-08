@@ -19,6 +19,7 @@ public class LowestCommonAncestor_236 {
         return root;
     }
 
+
     private boolean contains(TreeNode x, TreeNode p, TreeNode q){
         if(x == null) return false;
         boolean leftCon = contains(x.left, p, q);
